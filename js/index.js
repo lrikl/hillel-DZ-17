@@ -18,12 +18,14 @@ function salaryAmount(obj) {
     for (const key in obj) {
         const valueKey = obj[key];
 
-        if (Array.isArray(valueKey)) {
+       if (Array.isArray(valueKey)) {
             valueKey.forEach(employee => {
                 salarySum += employee.salary || 0;
             });
-            
         } 
+        else if(valueKey.salary){
+            salarySum += valueKey.salary;
+        }
         else {
             salarySum += salaryAmount(valueKey);
         }
