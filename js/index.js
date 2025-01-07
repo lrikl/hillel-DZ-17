@@ -23,7 +23,7 @@ function salaryAmount(obj) {
                 salarySum += employee.salary || 0;
             });
         } 
-        else if(valueKey.salary){
+        else if (valueKey.salary){
             salarySum += valueKey.salary;
         }
         else {
